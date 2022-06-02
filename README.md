@@ -46,6 +46,6 @@ void main(void)
 ```
 - - Add `#define DOWNLOAD_TO_FLASH 1` when running for flash
 
-<img width="251" alt="image" src="https://user-images.githubusercontent.com/25374802/171619592-28c77403-b843-44f5-bf1e-ddd0da3a3f1f.png">
+- <img width="251" alt="image" src="https://user-images.githubusercontent.com/25374802/171619592-28c77403-b843-44f5-bf1e-ddd0da3a3f1f.png">
 
-May still need F2806x_CodeStartBranch.asm file !!!
+- - May still need F2806x_CodeStartBranch.asm file !!!, otherwise weird turn on halt.   
