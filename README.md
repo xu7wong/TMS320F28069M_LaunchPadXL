@@ -31,4 +31,4 @@ void main(void)
 	}
 }
 ```
--- you can add a break point on line DELAY_US to catch the break every 1 second in debug mode.
+- - you can add a break point on line DELAY_US to catch the break every 1 second in debug mode.
