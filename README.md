@@ -32,3 +32,16 @@ void main(void)
 }
 ```
 - - you can add a break point on line DELAY_US to catch the break every 1 second in debug mode.
+
+- ## download to flash
+- - the default target is debugging in RAM, the program will lose after reset. Here are steps for flash download
+- - Exclude 28069_Ram_Lnk.cmd, it will be greyed out of the project. Add file F28069.cmd from C2000Ware.
+- - Project properties, Debug, F280xx Flash Settings, you can untick erase to save some time when downloading.
+- - Add code bellow to your code after `InitSysCtrl();`
+```
+#if DOWNLOAD_TO_FLASH
+    memcpy(&RamfuncsRunStart, &RamfuncsLoadStart, (Uint32)&RamfuncsLoadSize);
+    InitFlash();
+#endif
+```
+- - Add `#define DOWNLOAD_TO_FLASH 1` when running for flash
